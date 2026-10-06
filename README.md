@@ -1,1 +1,1 @@
-# PDF-X-1a
+# Generating and Validating PDF-X-1a
