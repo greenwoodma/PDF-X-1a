@@ -96,7 +96,7 @@ fi
 
 # 7. Check Raster Color Spaces
 echo -n "Scanning for Prohibited RGB Images......"
-RGB_IMAGES=$(pdfimages -list "$TARGET_PDF" 2>/dev/null | awk 'NR>2 {print $4}' | grep -E -i 'rgb|lab' | wc -l)
+RGB_IMAGES=$(pdfimages -list "$TARGET_PDF" 2>/dev/null | awk 'NR>2 {print $6}' | grep -E -i 'rgb|lab' | wc -l)
 if [ "$RGB_IMAGES" -eq 0 ]; then
     echo -e "\e[32m[PASS]\e[0m"
 else
